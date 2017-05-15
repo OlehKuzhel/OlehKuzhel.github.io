@@ -457,4 +457,7 @@ font-weight: 700;
     display: block;
     padding: 0;
 }
+.slider_bl .bx-wrapper .bx-viewport {
+	left: 13px
+}
 }

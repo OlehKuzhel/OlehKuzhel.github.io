@@ -89,7 +89,7 @@ jQuery(document).ready(function($) {
         prevSelector: '#sld3l',
         moveSlides: 1
     });
-     if (isMobile != true) {
+     // if (isMobile != true) {
     $('.slider1').bxSlider({
         minSlides: 1,
         slideWidth: 276,
@@ -116,34 +116,35 @@ jQuery(document).ready(function($) {
  		auto: false,
 		moveSlides: 1
     });
-} else {
- $('.slider1').bxSlider({
-        minSlides: 1,
-        slideWidth: 300,
-        maxSlides: 3,
-        slideMargin: 0,
-        pager: false,
-        speed: 500,
-        nextSelector: '#sld1r',
-        prevSelector: '#sld1l',
-        controls: true,
- 		auto: false,
-		moveSlides: 1
-    });
-    $('.slider2').bxSlider({
-        minSlides: 1,
-        slideWidth: 300,
-        maxSlides: 3,
-        slideMargin: 0,
-        pager: false,
-        speed: 500,
-        nextSelector: '#sld2r',
-        prevSelector: '#sld2l',
-        controls: true,
- 		auto: false,
-		moveSlides: 1
-    });
-    }
+// } 
+// else {
+//  $('.slider1').bxSlider({
+//         minSlides: 1,
+//         slideWidth: 300,
+//         maxSlides: 3,
+//         slideMargin: 0,
+//         pager: false,
+//         speed: 500,
+//         nextSelector: '#sld1r',
+//         prevSelector: '#sld1l',
+//         controls: true,
+//  		auto: false,
+// 		moveSlides: 1
+//     });
+//     $('.slider2').bxSlider({
+//         minSlides: 1,
+//         slideWidth: 300,
+//         maxSlides: 3,
+//         slideMargin: 0,
+//         pager: false,
+//         speed: 500,
+//         nextSelector: '#sld2r',
+//         prevSelector: '#sld2l',
+//         controls: true,
+//  		auto: false,
+// 		moveSlides: 1
+//     });
+//     }
 
     $('.ofissl1').bxSlider({
     	nextSelector: '#sld4r',
