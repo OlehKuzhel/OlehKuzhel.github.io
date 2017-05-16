@@ -45,13 +45,18 @@ jQuery(document).ready(function($) {
     }
 
     $(window).scroll(function(event) {
-        var sec_s = $('#s1').height()
+        var sec_s = 1;
         var s = $(this).scrollTop();
 
 
         if (s > sec_s) {
 
-            $('header').css('background', '#ecf0f5');
+            $('header').css({
+                'background':'#ecf0f5',
+                '-webkit-box-shadow':'0 5px 27px rgba(0, 0, 0, 0.1);',
+                'box-shadow':'0 5px 27px rgba(0, 0, 0, 0.1)'
+        });
+
             $('.text p').addClass('scrop');
             $('.phonekn').addClass('scr_p');
             $('.knopka_zakaz').addClass('scr_k');
@@ -60,7 +65,11 @@ jQuery(document).ready(function($) {
             $('.menua img').attr('src', 'img/menu_k.svg')
 
         } else {
-            $('header').css('background', 'transparent');
+            $('header').css({
+                'background':'transparent',
+                '-webkit-box-shadow':'none',
+                'box-shadow':'none'
+        });
             $('.text p').removeClass('scrop');
             $('.phonekn').removeClass('scr_p');
             $('.knopka_zakaz').removeClass('scr_k');
@@ -192,7 +201,24 @@ jQuery(document).ready(function($) {
                 "padding-right": "0px"
             })
         }
-    })} $(".test").click(function(a) {
+    })} 
+
+    $(".zakaz_pop_k").click(function(a) {
+        a.preventDefault(), $("#zakaz_pop").arcticmodal({
+            overlay: {
+                css: {
+                    backgroundColor: '#111',
+                    // backgroundImage: 'url(images/overlay.png)',
+                    // backgroundRepeat: 'repeat',
+                    // backgroundPosition: '50% 0',
+                    opacity: 0.5
+                }
+            }
+        })
+        return false;
+    });
+
+    $(".test").click(function(a) {
         a.preventDefault(), $("#test").arcticmodal({
             overlay: {
                 css: {
@@ -229,9 +255,10 @@ jQuery(document).ready(function($) {
 
 
         if ($('.act_step .kn_a').hasClass('act')) {
-
+            $(".back").show();
             current_step++;
             changeStep(current_step);
+
             var now = $('.skidka span').text();
             $('.skidka span').text(parseInt(now) + 625);
             $('.nom span').text(current_step + 1);
@@ -248,6 +275,7 @@ jQuery(document).ready(function($) {
     });
 
     $('.rad').click(function(event) {
+
         $('.rad').removeClass('act')
         $(this).addClass('act');
 
@@ -305,6 +333,16 @@ jQuery(document).ready(function($) {
 
     }
 
+    //Кнопка назад
+    $(".back").click(function(){
+        if (current_step == 1) {
+            $(this).hide();
+        }
+        // $("form input[type=submit]").hide();
+        // $("a.next").show();
+        current_step--;
+        changeStep(current_step);
+    });
 
 
 
@@ -314,7 +352,7 @@ jQuery(document).ready(function($) {
         var mapOptions = {
             zoom: 17,
             scrollwheel: false,
-            center: new google.maps.LatLng(55.717072, 37.628792),
+            center: new google.maps.LatLng(55.770884, 37.633209),
             styles: [{
                 "featureType": "all",
                 "elementType": "labels.text.fill",
@@ -431,7 +469,7 @@ jQuery(document).ready(function($) {
         var mapElement = document.getElementById('map');
         var map = new google.maps.Map(mapElement, mapOptions);
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(55.717036, 37.628825),
+            position: new google.maps.LatLng(55.770884, 37.633209),
             map: map,
             icon: {
                 url: 'img/Point map.svg',
@@ -439,7 +477,7 @@ jQuery(document).ready(function($) {
                 origin: new google.maps.Point(0, 0),
                 size: new google.maps.Size(60, 80),
             },
-            title: 'Шторы'
+            title: 'Россия, г. Москва, ул.Сретенка 28'
         });
     }
 

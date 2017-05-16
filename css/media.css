@@ -138,6 +138,7 @@ font-size: 16px;
 }
 
 .item {
+	width: 100%;
 	margin-bottom: 30px;
 	text-align: center;
 	display: -webkit-box;
@@ -150,9 +151,9 @@ font-size: 16px;
 	        -webkit-box-align: center;
 	            -ms-flex-align: center;
 	                align-items: center;
-	        -webkit-box-pack: center;
-	            -ms-flex-pack: center;
-	                justify-content: center;
+	        -webkit-box-pack: flex-start;
+	            -ms-flex-pack: flex-start;
+	                justify-content: flex-start;
 }
 
 .item p {
@@ -311,7 +312,7 @@ font-size: 16px;
 }
 
 .kn_a {
-	width: 145px;
+	width: 49%;
 	margin: 2.5px 0 ;
 	padding: 15px 0;
 }
@@ -331,7 +332,7 @@ font-size: 16px;
 font-weight: 400;
 }
 .che {
-	width: 93px;
+	width: 32.5%;
 height: 32px;
 font-size: 11px;
     padding: 10px 0;
@@ -349,7 +350,7 @@ font-weight: 500;
 
 
 .che4 {
-	width: 141px;
+	width: 49%;
 height: 85px;
 	font-size: 14px;
 font-weight: 700;
@@ -361,11 +362,11 @@ font-weight: 700;
 }
 .dlin_last {
 	font-weight: 500;
-	width: 100%;
+	width: 100% !important;
 }
 
 .che5 {
-	width: 93px;
+	width: 32.5%;
 height: 57px;
     padding: 23px 0;
 	font-size: 13px;
@@ -469,4 +470,12 @@ font-weight: 700;
 .close img {
     width: 25px;
 }
+.back img {
+    width: 25px;
+}
+
+.den_pad {
+	    padding: 15px;
+}
+
 }
