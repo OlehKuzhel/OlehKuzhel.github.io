@@ -460,4 +460,13 @@ font-weight: 700;
 .slider_bl .bx-wrapper .bx-viewport {
 	left: 13px
 }
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.close img {
+    width: 25px;
+}
 }
