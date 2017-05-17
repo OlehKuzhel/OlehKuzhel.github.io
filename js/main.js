@@ -154,7 +154,7 @@ jQuery(document).ready(function($) {
 // 		moveSlides: 1
 //     });
 //     }
-
+if (isMobile != true) {
     $('.ofissl1').bxSlider({
     	nextSelector: '#sld4r',
         prevSelector: '#sld4l',
@@ -185,6 +185,38 @@ jQuery(document).ready(function($) {
         captions: true,
         pager: true
     });
+} else {
+    $('.ofissl1').bxSlider({
+        nextSelector: '#sld4r',
+        prevSelector: '#sld4l',
+        slideWidth: 450,
+        startSlide: 1,
+        slideMargin: 5,
+        adaptiveHeight: true,
+        captions: true,
+        pager: false
+    });
+    $('.ofissl2').bxSlider({
+        nextSelector: '#sld5r',
+        prevSelector: '#sld5l',
+        slideWidth: 450,
+        startSlide: 1,
+        slideMargin: 5,
+        adaptiveHeight: true,
+        captions: true,
+        pager: false
+    });
+    $('.ofissl3').bxSlider({
+        nextSelector: '#sld6r',
+        prevSelector: '#sld6l',
+        slideWidth: 450,
+        startSlide: 1,
+        slideMargin: 5,
+        adaptiveHeight: true,
+        captions: true,
+        pager: false
+    });
+}
     if (isMobile != true) {
     $("body").addClass("loaded"), $("#test").arcticmodal("setDefault", {
         beforeOpen: function(a, b) {
