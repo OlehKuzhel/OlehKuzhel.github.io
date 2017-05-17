@@ -122,7 +122,7 @@ header{z-index:10;-webkit-box-shadow:none;box-shadow:none;padding:10px 0;top:0;p
 .sl_zag{margin:20px 0;color:#4f5362;font-family:Lato;font-size:20px;font-weight:700}
 .item p{margin-top:30px;font-family:Lato;font-size:16px;color:#666;font-weight:400}
 .item p span{color:#222328;font-weight:600}
-.a_kn p{margin-top:30px;font-family:Lato;font-size:16px;color:#666;font-weight:400}
+.a_kn p{margin-top:50px;font-family:Lato;font-size:16px;color:#666;font-weight:400}
 .a_kn p span{color:#222328;font-weight:600}
 .s_1{background:url(../img/sec1.jpg);background-size:cover;padding-top:225px}
 .s_2{padding-top:150px}
@@ -258,3 +258,26 @@ label[for=che26]{background:url(../img/Test/Image27.png) no-repeat, rgba(34, 35,
 .close_pop{padding:15px;position:absolute;top:-21px;left:47%;box-shadow:0 0 6px rgba(0, 0, 0, 0.05);background-color:#fff;border-radius:50%;cursor:pointer}
 .pop_pole{width:100%;padding:0 25px}
 .pop_pole input{width:47%}
+#menu_pop{height: 100%;    max-height: 600px;}
+.menu_pop_b{margin: 0 auto;position: relative;max-width: 500px;} 
+.menu_a{color:#fff;text-decoration:none;font-family:'Lato';font-size:18px;font-weight:700;}
+.menu_ul{text-align: center;list-style: none;height: 100%;}
+.black_k {
+	color: #000;
+}
+.menu_ul li { height: calc(100% / 11);  }
+/* .knopka{
+	-webkit-box-shadow:0 11px 27px rgba(197, 164, 126, 0.25);
+	box-shadow:0 11px 27px rgba(197, 164, 126, 0.25);
+	border-radius:50px;
+	background-color:#c5a47e;
+	color:#fff;
+	padding:24px 37px 24px 37px;
+	text-align:center;
+	display:inline-block;
+	text-decoration:none;
+	font-family:'Lato';
+	font-size:17px;font-weight:700;
+	border:none
+}
+ */

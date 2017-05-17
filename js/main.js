@@ -5,7 +5,27 @@ jQuery(document).ready(function($) {
         $("html, body").animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 1000);
+    });
 
+    $('.menu_a').click(function(e) {
+        e.preventDefault();
+        $("html, body").animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 1000);
+        $('#menu_pop').arcticmodal('close');
+    });
+
+
+    $(".menua").click(function(a) {
+        a.preventDefault(), $("#menu_pop").arcticmodal({
+            overlay: {
+                    css: {
+                        backgroundColor: '#c5a47e',
+                        opacity: 1
+                    }
+            }
+        })
+        return false;
     });
 
     var isMobile = false;
@@ -321,7 +341,17 @@ if (isMobile != true) {
         return false;
     });
 
+var $text4 = $('.step2'),
+        $box4 = $('input:checkbox[name="step2[]"]');
 
+    $box4.on('click change', function() {
+        var values = [];
+
+        $box4.filter(':checked').each(function() {
+            values.push(this.value);
+        });
+        $text4.val(values.join(','));
+    });
     var $text1 = $('.step3'),
         $box1 = $('input:checkbox[name="step3[]"]');
 
@@ -369,7 +399,15 @@ if (isMobile != true) {
     $(".back").click(function(){
         if (current_step == 1) {
             $(this).hide();
+            $('.nom span').text(current_step - 0);
+        } else {
+            $('.nom span').text(current_step);
         }
+
+        var now = $('.skidka span').text();
+            $('.skidka span').text(parseInt(now) - 625);
+            
+
         // $("form input[type=submit]").hide();
         // $("a.next").show();
         current_step--;

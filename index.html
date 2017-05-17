@@ -467,15 +467,24 @@
                         <div class="step">
                            <div class="flex_st">
                               <h2 class="tit_step">Какую комнату хотите оформить?</h2>
+                               <p class="pod">Вы можете выбрать несколько вариантов</p>
                               <div class="bl_vubor mar_top">
-                                 <label class="kn_a rad"><input type="radio" value="Гостиная" name="step2"/>Гостиная</label> 
-                                 <label class="kn_a rad"><input type="radio" value="Спальня" name="step2"/>Спальня</label>
-                                 <label class="kn_a rad font_m"><input type="radio" value="Рабочий кабинет" name="step2"/>Рабочий кабинет</label>
-                                 <label class="kn_a rad font_m"><input type="radio" value="Обеденная зона" name="step2"/>Обеденная зона</label>
-                                 <label class="kn_a rad"><input type="radio" value="Кухня" name="step2"/>Кухня</label>
-                                 <label class="kn_a rad"><input type="radio" value="Детская" name="step2"/>Детская</label>
-                                 <label class="kn_a rad"><input type="radio" value="Ванная" name="step2"/>Ванная</label>
-                                 <label class="kn_a rad"><input type="radio" value="Другая комната" name="step2"/>Другая комната</label>
+                                  <input type="checkbox" id="che28" value="Гостиная" name="step2[]"/> 
+                                 <label class="kn_a che_rad" for="che28">Гостиная</label>
+                                 <input type="checkbox" id="che29" value="Спальня" name="step2[]"/> 
+                                 <label class="kn_a che_rad" for="che29">Спальня</label>
+                                 <input type="checkbox" id="che30" value="Рабочий кабинет" name="step2[]"/> 
+                                 <label class="kn_a che_rad" for="che30">Рабочий кабинет</label>
+                                 <input type="checkbox" id="che31" value="Обеденная зона" name="step2[]"/> 
+                                 <label class="kn_a che_rad" for="che31">Обеденная зона</label>
+                                 <input type="checkbox" id="che32" value="Кухня" name="step2[]"/> 
+                                 <label class="kn_a che_rad" for="che32">Кухня</label>
+                                 <input type="checkbox" id="che33" value="Детская" name="step2[]"/> 
+                                 <label class="kn_a che_rad" for="che33">Детская</label>
+                                 <input type="checkbox" id="che34" value="Ванная" name="step2[]"/> 
+                                 <label class="kn_a che_rad" for="che34">Ванная</label>
+                                 <input type="checkbox" id="che35" value="Другая комната" name="step2[]"/> 
+                                 <label class="kn_a che_rad" for="che35">Другая комната</label>
                               </div>
                            </div>
                         </div>
@@ -636,8 +645,7 @@
       <div style="display: none;">
          <div class="box-modal" id="zakaz_pop">
             <div class="zakaz_zvonka_popup">
-               <div class="close_pop box-modal_close
-                  arcticmodal-close"><img src="img/close_zak.png" alt="close_zak"></div>
+               <div class="close_pop box-modal_close arcticmodal-close"><img src="img/close_zak.png" alt="close_zak"></div>
                <h2><span>Заполните форму</span> и наш менеджер перезвонит
                   Вам в ближайшее время
                </h2>
@@ -652,6 +660,26 @@
                </div>
                <!-- <div class="box-modal_close close arcticmodal-close"><img src="img/close.png" alt="close"></div> -->
             </div>
+         </div>
+      </div>
+      <div style="display: none">
+         <div class="box-modal" id="menu_pop">
+         <!-- <div class="close_pop box-modal_close arcticmodal-close"><img src="img/close_zak.png" alt="close_zak"></div> -->
+         <div class="menu_pop_b">
+            <ul class="menu_ul">
+               <li><img src="img/close_zak.png" alt="close_zak"></li>
+               <li><a href="tel:+84995044189" class="phonekn">+8 (499) 504-41-89</a></li>
+               <li><div class="zakaz"><a href="#" class="menu_a black_k zakaz_pop_k">Заказать звонок</a></div></li>
+               <li><a href="#s1" class="menu_a">Главная</a></li>
+               <li><a href="#s2" class="menu_a">Подобрать оформление</a></li>
+               <li><a href="#s3" class="menu_a">Более 187 видов оформления</a></li>
+               <li><a href="#s4" class="menu_a">Карнизы и дополнения</a></li>
+               <li><a href="#s5" class="menu_a">Получить каталог</a></li>
+               <li><a href="#s6" class="menu_a">Почему мы?</a></li>
+               <li><a href="#s7" class="menu_a">Наши работы</a></li>
+               <li><a href="#s9" class="menu_a">Контакты</a></li>
+            </ul>
+         </div>
          </div>
       </div>
    </body>
