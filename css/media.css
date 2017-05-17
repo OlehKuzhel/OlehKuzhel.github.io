@@ -477,5 +477,51 @@ font-weight: 700;
 .den_pad {
 	    padding: 15px;
 }
+.zakaz_zvonka_popup {
+    position: relative;
+    max-width: 725px;
 
+    margin: 0 auto;
+    height: 100%;
+    padding: 105px 12px 45px 12px;
+    background: #fff;
+}
+
+.zakaz_zvonka_popup h2 {
+    font-family: "Proxima Nova Rg";
+font-size: 24px;
+font-weight: 700;
+color: #222328;
+
+}
+
+.close_pop img {
+	width: 10px;
+}
+
+.zakaz_zvonka_popup h2 span {
+    color: #c5a47e;
+}
+#zakaz_pop {
+	height: 100%;
+}
+.close_pop {
+   padding: 15px;
+    position: absolute;
+    top: 35px;
+    left: 41%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pop_pole {
+    width: 100%;
+    padding: 0 0
+}
+
+ .pop_pole input  {
+    width: 100%;
+    } 
 }
