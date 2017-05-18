@@ -15,9 +15,14 @@ jQuery(document).ready(function($) {
         $('#menu_pop').arcticmodal('close');
     });
 
+    $('.close_m').click(function(event) {
+       $('#menu_pop').arcticmodal('close');
+    });
+
 
     $(".menua").click(function(a) {
-        a.preventDefault(), $("#menu_pop").arcticmodal({
+        a.preventDefault(), 
+        $("#menu_pop").arcticmodal({
             overlay: {
                     css: {
                         backgroundColor: '#c5a47e',
@@ -27,6 +32,42 @@ jQuery(document).ready(function($) {
         })
         return false;
     });
+
+$('.slider1 .sl_item').click(function(event) {
+ 
+   var c = $('<div class="box-modal" id="pop_sl_'+ $(this).data('sl') +'" />');
+                            // c.prepend('<div class="close_pop box-modal_close arcticmodal-close"><img src="img/close_zak.png" alt="close_zak"></div>');
+                            c.prepend('<div class="flex_slide"><h2>'+ $(this).find('p').text() + '</h2>'+
+                                '<div class="close_pop box-modal_close arcticmodal-close"><img src="img/close_zak.png" alt="close_zak"></div>'+
+                                    '<div class="dva_fl">'+
+   '<div class="left_img_sl"><img src="' + $(this).children('img').attr('src') +'" alt="bg"></div>'+
+   '<div class="right_text_sl">'+
+      '<p class="text_pop_sl">'+  $(this).data('info') + '</p>'+
+       '<a href="#" class="knopka test" >Получить каталог</a>'+
+   '</div>'+
+'</div>'+
+                                '</div>'
+                                    
+
+                                );
+                            $.arcticmodal({
+                                beforeOpen: function(data, el) {
+         $(".test").click(function(a) {
+        a.preventDefault(), $("#test").arcticmodal({
+            overlay: {
+                css: {
+                    backgroundColor: '#ecf0f5',
+                    opacity: 1
+                }
+            }
+        })
+        return false;
+    });
+    },
+                                content: c
+    });
+});
+
 
     var isMobile = false;
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -134,6 +175,13 @@ jQuery(document).ready(function($) {
  		auto: false,
 		moveSlides: 1
     });
+
+
+     // $('.bxslider').bxSlider();
+// var slideQty = slider.getSlideCount();
+// console.log(slideQty)
+
+
     $('.slider2').bxSlider({
         minSlides: 1,
         startSlide: 1,
@@ -148,6 +196,9 @@ jQuery(document).ready(function($) {
  		auto: false,
 		moveSlides: 1
     });
+
+
+
     $('.ofissl1').bxSlider({
     	nextSelector: '#sld4r',
         prevSelector: '#sld4l',
@@ -197,7 +248,9 @@ jQuery(document).ready(function($) {
     })} 
 
     $(".zakaz_pop_k").click(function(a) {
-        a.preventDefault(), $("#zakaz_pop").arcticmodal({
+        a.preventDefault(), 
+       
+        $("#zakaz_pop").arcticmodal({
             overlay: {
                 css: {
                     backgroundColor: '#111',
@@ -207,6 +260,19 @@ jQuery(document).ready(function($) {
         })
         return false;
     });
+$('.zakaz_pop_k_n').click(function(a) {
+    a.preventDefault(), 
+    $('#zakaz_pop' + $(this).data('body')).arcticmodal({
+            overlay: {
+                css: {
+                   backgroundColor: '#c5a47e',
+                        opacity: 1
+                }
+            }
+        })
+});
+
+
 
     $(".test").click(function(a) {
         a.preventDefault(), $("#test").arcticmodal({

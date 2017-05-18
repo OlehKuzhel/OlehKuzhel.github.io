@@ -38,13 +38,17 @@ header .mobile{display:block}
 .text p{font-size:14px;margin-bottom:85px}
 .mob_t{display:block}
 .knopka{font-size:16px;padding:15.5px 27px 17px 25px}
-.nextstr{margin-top:15%}
+.nextstr{margin-top:6%}
 .nextstr img{width:6%}
 .zag_sec1{font-size:24px}
 .zag_h1 p{font-size:15px}
 .zag{font-size:19px}
 .left_img img {
 	width: 60%
+}
+
+.left_img_sl {
+	margin: 0 auto;
 }
 .s_6 .zag {font-size: 17px;}
 .s_4 .zag{margin-bottom: 5px;}
@@ -86,8 +90,8 @@ header .mobile{display:block}
 .bl_vubor{margin-top:20px;height:auto;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .error{font-size:13px}
 .font_m{font-size:16px;font-weight:400}
-.che{width:32.5%;height:32px;font-size:11px;padding:10px 0}
-.che.pad_n_n{padding:5px 0}
+.che{width:32.5%;height:45px;font-size:11px;padding:17px 0}
+.che.pad_n_n{padding:12px 0}
 .che.dlin_last{width:100%;font-size:13px;font-weight:500;padding:8px 0}
 .che4{width:49%;height:85px;font-size:14px;font-weight:700;padding:30px 0}
 .che4.dlin_last{height:45px;padding:15px 0}
@@ -130,7 +134,7 @@ header .mobile{display:block}
 .close{position:absolute;right:15px;top:15px}
 .close img{width:25px}
 .back img{width:25px}
-.den_pad{padding:15px}
+.den_pad{padding:15px 0; }
 .zakaz_zvonka_popup{position:relative;max-width:725px;margin:0 auto;height:100%;padding:105px 12px 45px 12px;background:#fff}
 .zakaz_zvonka_popup h2{font-family:"Proxima Nova Rg";font-size:24px;font-weight:700;color:#222328}
 .close_pop img{width:10px}
@@ -139,4 +143,36 @@ header .mobile{display:block}
 .close_pop{padding:15px;position:absolute;top:35px;left:41%;-webkit-box-shadow:0 0 6px rgba(0, 0, 0, 0.05);box-shadow:0 0 6px rgba(0, 0, 0, 0.05);background-color:#fff;border-radius:50%;cursor:pointer}
 .pop_pole{width:100%;padding:0 0}
 .pop_pole input{width:100%}
+.right_text_sl {
+	margin-left: 0
+}
+.flex_slide .close_pop {
+	top: 10px;
+}
+.flex_slide {
+	padding: 65px 0 10px 0;
+}
+.right_text_sl {
+	padding: 25px 12px 0 12px;
+}
+
+.flex_slide h2 {
+	font-size: 20px;margin-bottom: 25px;
+}
+
+.right_text_sl a{margin-top:25px;width: 100%}
+.dva_fl p {
+
+	color: #666;
+font-family: Lato;
+font-weight: 400;
+line-height: 1;
+
+font-size: 15px;
+}
+
+.dva_fl img {width: 100%;}
+.dva_fl {
+	flex-direction: column;
+}
 }
