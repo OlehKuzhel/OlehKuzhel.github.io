@@ -51,7 +51,11 @@ $('.slider1 .sl_item').click(function(event) {
 
                                 );
                             $.arcticmodal({
-                                beforeOpen: function(data, el) {
+                                beforeOpen: function(a, b) {
+                                    $("body,header").css({
+                overflow: "hidden",
+                "padding-right": "16px"
+            }), $(b).closest(".arcticmodal-container_i").css("width", "100%")
          $(".test").click(function(a) {
         a.preventDefault(), $("#test").arcticmodal({
             overlay: {
@@ -64,6 +68,14 @@ $('.slider1 .sl_item').click(function(event) {
         return false;
     });
     },
+        afterOpen: function(a, b) {},
+        beforeClose: function(a, b) {},
+        afterClose: function(a, b) {
+            $("body,header").css({
+                overflow: "visible",
+                "padding-right": "0px"
+            })
+        },
                                 content: c
     });
 });
@@ -230,7 +242,9 @@ $('.slider1 .sl_item').click(function(event) {
         pager: true
     });
     if (isMobile != true) {
-    $("body").addClass("loaded"), $("#test").arcticmodal("setDefault", {
+    $("body").addClass("loaded"), 
+
+    $.arcticmodal("setDefault", {
         beforeOpen: function(a, b) {
             $("body,header").css({
                 overflow: "hidden",
