@@ -101,7 +101,7 @@ header{z-index:10;-webkit-box-shadow:none;box-shadow:none;padding:10px 0;top:0;p
 .phonekn{-webkit-transition:0.2s;transition:0.2s;font-size:20px;color:#fff;font-family:Lato;font-weight:700}
 .knopka_zakaz{display:inline-block;color:#fff;font-family:Lato;font-size:16px;font-weight:600;border-radius:22px;padding:12px 25px;border:2px solid rgba(255, 255, 255, 0.3);-webkit-transition:0.2s;transition:0.2s}
 .knopka_zakaz.scr_k{color:#c5a47e;border:2px solid rgba(197, 164, 126, 0.3)}
-.nextstr{margin-top:8%;display:block}
+.nextstr{margin-top:5%;display:block}
 .knopka{-webkit-box-shadow:0 11px 27px rgba(197, 164, 126, 0.25);box-shadow:0 11px 27px rgba(197, 164, 126, 0.25);border-radius:50px;background-color:#c5a47e;color:#fff;padding:24px 37px 24px 37px;text-align:center;display:inline-block;text-decoration:none;font-family:'Lato';font-size:17px;font-weight:700;border:none}
 .knopka:hover{background-color:#b99468}
 .knopka_sub{-webkit-box-shadow:0 11px 27px rgba(197, 164, 126, 0.25);box-shadow:0 11px 27px rgba(197, 164, 126, 0.25);border-radius:32px;background-color:#c5a47e;color:#fff;padding:17px 37px;text-align:center;display:inline-block;text-decoration:none;font-family:'Lato';font-size:17px;font-weight:700;border:none;outline:none}
@@ -113,16 +113,19 @@ header{z-index:10;-webkit-box-shadow:none;box-shadow:none;padding:10px 0;top:0;p
 .pole:-moz-placeholder{color:rgba(39, 39, 39, 0.7);font-weight:400}
 .pole:-ms-input-placeholder{color:rgba(39, 39, 39, 0.7);font-weight:400}
 .zag_sec1{font-family:"Proxima Nova Bl";font-size:54px;font-weight:900;margin-bottom:30px;color:#fff}
-.zag_h1 p{font-family:Lato;opacity:0.8;color:#fff;font-size:25px;font-weight:400;margin-bottom:55px}
+.zag_h1 p{font-family:Lato;opacity:0.8;color:#fff;font-size:25px;font-weight:400;margin-bottom:85px}
 .zag_sec1 span{color:#e9caa6}
 .zag{margin-bottom:25px;font-family:"Proxima Nova Bl";font-size:36px;font-weight:900;color:#222328}
 .zag span{color:#c5a47e}
+.zag {max-width: 910px;}
+/* .sl_of img {height:75%;} */
+.zag_h2 {display: flex;flex-direction:column;align-items: center;justify-content: center}
 .zag_h2 p{font-family:Lato;opacity:0.8;color:#4f5362;font-size:25px;font-weight:400}
 .zag_h2 p.cvet_p{font-family:'Proxima Nova Rg';color:#c5a47e;font-size:30px;font-weight:700}
 .sl_zag{margin:20px 0;color:#4f5362;font-family:Lato;font-size:20px;font-weight:700}
 .item p{margin-top:30px;font-family:Lato;font-size:16px;color:#666;font-weight:400}
 .item p span{color:#222328;font-weight:600}
-.a_kn p{margin-top:50px;font-family:Lato;font-size:16px;color:#666;font-weight:400}
+.a_kn p{margin-top:60px;font-family:Lato;font-size:16px;color:#666;font-weight:400}
 .a_kn p span{color:#222328;font-weight:600}
 .s_1{background:url(../img/sec1.jpg);background-size:cover;padding-top:225px}
 .s_2{padding-top:150px}
@@ -171,9 +174,10 @@ header{z-index:10;-webkit-box-shadow:none;box-shadow:none;padding:10px 0;top:0;p
 .con_ul li{margin:30px 0 0 0}
 .map{z-index:1;width:100%;position:absolute;right:0;left:0;bottom:0;height:52%}
 .bx-pager-link img{width:175px}
-.pager{margin-top:30px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
-.pager img:hover{cursor:pointer}
-.pager img{width:175px}
+.pager{margin-top:30px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;justify-content:flex-start}
+.pager img:hover{cursor:pointer;}
+.pager img{width:175px;margin-right: 30px;}
+.pager img:last-child {margin-right: 0;}
 .glav_kar{width:100%}
 .glav_kar img{width:100%}
 #s9 .mid{height:auto}
@@ -220,6 +224,7 @@ label[for=che26]{background:url(../img/Test/Image27.png) no-repeat, rgba(34, 35,
 .no_padd{padding:42.5px 0}
 .kn_a.dlin{width:500px}
 .kn_a:hover{color:#fff;background:rgba(197, 164, 126, 0.9)}
+/* .zag{max-width: 850px;margin: 0 auto;} */
 .rad.act{color:#fff;background:#c5a47e}
 .next_step{margin-top:25px}
 .skidka{margin-top:25px;color:#4f5362;font-family:Lato;font-size:25px;font-weight:400}

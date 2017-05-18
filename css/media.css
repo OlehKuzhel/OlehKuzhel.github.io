@@ -19,10 +19,14 @@ header .mobile{display:none}
 @media screen and (max-width: 720px){header .desktop{display:none}
 header .mobile{display:block}
 }
-@media screen and (max-width: 480px){section{min-height:auto}
-.s_1{padding-top:95px;padding-bottom:35px}
+@media screen and (max-width: 480px){
+
+
+	section{min-height:568px;height: auto;}
+	section .mid .m-mid{width:100%;position:relative;height:100%;top:0;margin-top:0}
+.s_1{padding-top:95px;padding-bottom:0}
 .s_2{padding-top:95px}
-.s_3{padding-top:95px}
+.s_3{padding-top:95px;height: 568px}
 .s_4{padding-top:95px}
 .s_5{padding-top:95px}
 .s_6{padding-top:95px}
@@ -37,11 +41,16 @@ header .mobile{display:block}
 .nextstr img{width:6%}
 .zag_sec1{font-size:24px}
 .zag_h1 p{font-size:15px}
-.zag{font-size:20px}
+.zag{font-size:19px}
+.left_img img {
+	width: 60%
+}
+.s_6 .zag {font-size: 17px;}
+.s_4 .zag{margin-bottom: 5px;}
 .zag_h2 p{font-size:16px}
 .zag_h2 p.cvet_p{font-size:16px}
-.item_preim{margin-top:25px}
-.bl_poluch{margin-top:50px;margin-bottom:35px;display:-ms-flexbox;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-pack:distribute;justify-content:space-around}
+.item_preim{margin-top:0}
+.bl_poluch{margin-top:50px;margin-bottom:0;display:-ms-flexbox;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-pack:distribute;justify-content:space-around}
 .item{width:100%;margin-bottom:30px;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:flex-start;-ms-flex-pack:flex-start;justify-content:flex-start}
 .item p{padding-left:15px;text-align:left;margin:0}
 .a_kn p{display:none}
@@ -52,20 +61,21 @@ header .mobile{display:block}
 .form form input{width:100%;margin-right:0;margin-top:10px}
 .form form .knopka_sub{margin-top:35px}
 .preim img{display:none}
-.bl_s_text h3{font-size:15px}
+.slider {margin-top:0;}
+.bl_s_text h3{font-size:15px;    margin-bottom: 10px;}
 .bl_s_text p{font-size:12px}
 .preim{margin-bottom:10px;padding:13px 13px 13px 13px}
 .pager{display:none}
 .slide{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .right_it{margin-top:20px;width:100%}
 .right_it h3{text-align:center;font-size:16px;padding-bottom:0}
-.it_p{padding-top:15px;font-size:15px}
+.it_p{padding-top:15px;font-size:15px;line-height: 18px;}
 .it_p span{font-size:15px;padding-bottom:5px}
 .bl_con{padding:25px 25px 25px 25px;position:relative}
 .bl_con p{font-size:18px}
 .con_ul{font-size:18px}
 .con_ul li{margin-top:25px}
-.tri_slider{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;left:0;bottom:0}
+.tri_slider{position:absolute;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;left:0;bottom:0}
 .tit_step{font-size:20px}
 .nom{font-size:13px;padding:7px}
 .skidka{font-size:18px}
@@ -95,11 +105,17 @@ header .mobile{display:block}
 .flex_st .bl_poluch .item:last-child{margin:0}
 .flex_st .bl_poluch .item p{font-size:14px}
 .flex_st .bl_poluch .item img{width:10%}
+.bl_poluch .item img{width:11.5%}
 .tri_slider{margin-top:25px}
-.nadpis{position:absolute;z-index:9;bottom:15px;width:100%;left:0;-webkit-transform:rotate(0);transform:rotate(0)}
+.nadpis{position:absolute;z-index:9;top:10px;width:100%;left:0;-webkit-transform:rotate(0);transform:rotate(0)}
 .nadpis p{text-align:center;color:#fff;font-family:Lato;font-size:12px;font-weight:400;text-transform:uppercase}
 .it_sl_i{height:100px}
 .sl_of{height:100px}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+}
 .it_sl_i img{margin-top:-120px}
 .it_sl_i .bx-caption{top:35px}
 .outside span.str_r_s4{top:40px}

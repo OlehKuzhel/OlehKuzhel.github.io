@@ -101,10 +101,11 @@ jQuery(document).ready(function($) {
     });
 
     $('.pager img').click(function(event) {
+        var now_img =  $(this).parent().parent().find('.glav')
+        now_img = now_img.attr('src')
         var this_img = $(this).attr('src')
-
-        $('.glav_kar img').attr('src', this_img)
-
+        $(this).parent().parent().find('.glav').attr('src', this_img)
+        $(this).attr('src',now_img)
     });
 
     $('.sl_bol').bxSlider({
@@ -121,6 +122,7 @@ jQuery(document).ready(function($) {
      // if (isMobile != true) {
     $('.slider1').bxSlider({
         minSlides: 1,
+        startSlide: 1,
         slideWidth: 276,
         maxSlides: 3,
         slideMargin: 30,
@@ -134,6 +136,7 @@ jQuery(document).ready(function($) {
     });
     $('.slider2').bxSlider({
         minSlides: 1,
+        startSlide: 1,
         slideWidth: 276,
         maxSlides: 3,
         slideMargin: 30,
@@ -145,41 +148,11 @@ jQuery(document).ready(function($) {
  		auto: false,
 		moveSlides: 1
     });
-// } 
-// else {
-//  $('.slider1').bxSlider({
-//         minSlides: 1,
-//         slideWidth: 300,
-//         maxSlides: 3,
-//         slideMargin: 0,
-//         pager: false,
-//         speed: 500,
-//         nextSelector: '#sld1r',
-//         prevSelector: '#sld1l',
-//         controls: true,
-//  		auto: false,
-// 		moveSlides: 1
-//     });
-//     $('.slider2').bxSlider({
-//         minSlides: 1,
-//         slideWidth: 300,
-//         maxSlides: 3,
-//         slideMargin: 0,
-//         pager: false,
-//         speed: 500,
-//         nextSelector: '#sld2r',
-//         prevSelector: '#sld2l',
-//         controls: true,
-//  		auto: false,
-// 		moveSlides: 1
-//     });
-//     }
-if (isMobile != true) {
     $('.ofissl1').bxSlider({
     	nextSelector: '#sld4r',
         prevSelector: '#sld4l',
         slideWidth: 450,
-        startSlide: 1,
+        // startSlide: 1,
         slideMargin: 5,
         adaptiveHeight: true,
         captions: true,
@@ -189,7 +162,7 @@ if (isMobile != true) {
     	nextSelector: '#sld5r',
         prevSelector: '#sld5l',
         slideWidth: 450,
-        startSlide: 1,
+        // startSlide: 1,
         slideMargin: 5,
         adaptiveHeight: true,
         captions: true,
@@ -199,44 +172,12 @@ if (isMobile != true) {
     	nextSelector: '#sld6r',
         prevSelector: '#sld6l',
         slideWidth: 450,
-        startSlide: 1,
+        // startSlide: 1,
         slideMargin: 5,
         adaptiveHeight: true,
         captions: true,
         pager: true
     });
-} else {
-    $('.ofissl1').bxSlider({
-        nextSelector: '#sld4r',
-        prevSelector: '#sld4l',
-        slideWidth: 450,
-        startSlide: 1,
-        slideMargin: 5,
-        adaptiveHeight: true,
-        captions: true,
-        pager: false
-    });
-    $('.ofissl2').bxSlider({
-        nextSelector: '#sld5r',
-        prevSelector: '#sld5l',
-        slideWidth: 450,
-        startSlide: 1,
-        slideMargin: 5,
-        adaptiveHeight: true,
-        captions: true,
-        pager: false
-    });
-    $('.ofissl3').bxSlider({
-        nextSelector: '#sld6r',
-        prevSelector: '#sld6l',
-        slideWidth: 450,
-        startSlide: 1,
-        slideMargin: 5,
-        adaptiveHeight: true,
-        captions: true,
-        pager: false
-    });
-}
     if (isMobile != true) {
     $("body").addClass("loaded"), $("#test").arcticmodal("setDefault", {
         beforeOpen: function(a, b) {
@@ -260,9 +201,6 @@ if (isMobile != true) {
             overlay: {
                 css: {
                     backgroundColor: '#111',
-                    // backgroundImage: 'url(images/overlay.png)',
-                    // backgroundRepeat: 'repeat',
-                    // backgroundPosition: '50% 0',
                     opacity: 0.5
                 }
             }
@@ -275,9 +213,6 @@ if (isMobile != true) {
             overlay: {
                 css: {
                     backgroundColor: '#ecf0f5',
-                    // backgroundImage: 'url(images/overlay.png)',
-                    // backgroundRepeat: 'repeat',
-                    // backgroundPosition: '50% 0',
                     opacity: 1
                 }
             }
@@ -290,15 +225,12 @@ if (isMobile != true) {
     var steps = $(".calc").children(".step");
     $(steps[0]).fadeIn(100);
     var current_step = 0;
-    // $(".next_step").css('display','none')
     $('.kn_a').click(function(event) {
-        // $('.kn_a').removeClass('act')
         if ($(this).hasClass('act')) {
             $(this).removeClass('act')
         } else {
             $(this).addClass('act');
         }
-        // $(this).addClass('act'); 
         $('.error').fadeOut();
 
     });
