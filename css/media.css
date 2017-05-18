@@ -3,7 +3,8 @@
 header .desktop{display:block}
 header .mobile{display:none}
 }
-@media screen and (max-width: 1200px){.slider .outside{display:none}
+@media screen and (max-width: 1200px){
+	/* .slider .outside{display:none} */
 section{text-align:center;z-index:2;width:100%;min-width:100%;overflow:hidden;position:relative;min-height:630px;height:100%;background-size:cover !important}
 section .mid{max-width:100%;width:100%;position:relative;z-index:2;height:100%;margin:0 auto;padding:0 12px}
 section .mid .m-mid{width:100%;position:relative;height:100%;top:37%;margin-top:0}
@@ -111,11 +112,7 @@ header .mobile{display:block}
 .nadpis p{text-align:center;color:#fff;font-family:Lato;font-size:12px;font-weight:400;text-transform:uppercase}
 .it_sl_i{height:100px}
 .sl_of{height:100px}
-.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {position: absolute;bottom:15px;width:100%;}
 .it_sl_i img{margin-top:-120px}
 .it_sl_i .bx-caption{top:35px}
 .outside span.str_r_s4{top:40px}
@@ -124,7 +121,10 @@ header .mobile{display:block}
 .outside span.str_l_s5{top:40px}
 .outside span.str_r_s6{top:40px}
 .outside span.str_l_s6{top:40px}
-.slider_bl .outside{display:none}
+.outside span.str_l_s3 {top: 45%;left: -3%}
+.outside span.str_r_s3 {top: 45%;right: -3%}
+.slider .outside span {    height: 15px;}
+/* .slider_bl .outside{display:none} */
 .it_sl_i .bx-caption span{color:#fefeff;font-family:"Proxima Nova Rg";font-size:24px;font-weight:400;display:block;padding:0}
 .slider_bl .bx-wrapper .bx-viewport{left:13px}
 .close{position:absolute;right:15px;top:15px}
