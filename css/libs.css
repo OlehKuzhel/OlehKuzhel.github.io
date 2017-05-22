@@ -19,7 +19,7 @@
 .slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}
 .slick-arrow.slick-hidden{display:none}
 .slick-dotted.slick-slider{margin-bottom:0}
-.title {font-family:"Proxima Nova";font-size:30px;font-weight:400; color:#fefeff; z-index:10;top:43px;left:0;width: 455px;position: absolute}
+.title {font-family:"Proxima Nova Rg";font-size:30px;font-weight:400; color:#fefeff; z-index:10;top:43px;left:0;width: 455px;position: absolute}
 .slick-dots{position:absolute;bottom:25px;display:block;width:100%;padding:0;margin:0;list-style:none;text-align:center}
 .slick-dots li{position:relative;display:inline-block;width:10px;height:10px;margin:0 5px;padding:0;cursor:pointer}
 .slick-dots li button{font-size:0;line-height:0;display:block;width:10px;height:10px;padding:5px;border-radius:50%;cursor:pointer;color:transparent;border:1px solid #fff;outline:none;background:transparent}

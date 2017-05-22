@@ -87,7 +87,7 @@
             <div class="m-mid">
                <div class="zag_h2">
                   <h2 class="zag">Создаем <span>эксклюзивный дизайн</span> окон, учитывая характер жильцов и помещения</h2>
-                  <p>Более 1487 видов индивидуального оформления</p>
+                  <p>Более 1500 видов индивидуального оформления</p>
                </div>
             </div>
          </div>
@@ -247,7 +247,7 @@
          <div class="mid">
             <div class="m-mid">
                <div class="zag_h2">
-                  <h2 class="zag">Посмотрите коллекцию из более чем <span>5436 видов тканей</span> и в нашем бесплатном каталоге</h2>
+                  <h2 class="zag">Посмотрите коллекцию из более чем <span>5000 видов тканей</span> и в нашем бесплатном каталоге</h2>
                </div>
                <div class="flex_img_f">
                   <div class="left_img">
@@ -735,7 +735,7 @@
                   <li><div class="zakaz"><a href="#" class="black_k zakaz_pop_k_n" data-body="2">Заказать звонок</a></div></li>
                   <li><a href="#s1" class="menu_a">Главная</a></li>
                   <li><a href="#s2" class="menu_a">Подобрать оформление</a></li>
-                  <li><a href="#s3" class="menu_a">Более 1487 видов оформления</a></li>
+                  <li><a href="#s3" class="menu_a">Более 1500 видов оформления</a></li>
                   <li><a href="#s4" class="menu_a">Карнизы и дополнения</a></li>
                   <li><a href="#s5" class="menu_a">Получить каталог</a></li>
                   <li><a href="#s6" class="menu_a">Почему мы?</a></li>
