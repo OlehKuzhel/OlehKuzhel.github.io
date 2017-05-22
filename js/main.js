@@ -1,6 +1,6 @@
-jQuery(document).ready(function($) {
+$(document).ready(function($) {
 
-    $('.nextstr').click(function(e) {
+    $('.test_s2').click(function(e) {
         e.preventDefault();
         $("html, body").animate({
             scrollTop: $($(this).attr('href')).offset().top
@@ -16,69 +16,71 @@ jQuery(document).ready(function($) {
     });
 
     $('.close_m').click(function(event) {
-       $('#menu_pop').arcticmodal('close');
+        $('#menu_pop').arcticmodal('close');
     });
 
 
     $(".menua").click(function(a) {
-        a.preventDefault(), 
-        $("#menu_pop").arcticmodal({
-            overlay: {
+        a.preventDefault(),
+            $("#menu_pop").arcticmodal({
+                overlay: {
                     css: {
                         backgroundColor: '#c5a47e',
                         opacity: 1
                     }
-            }
-        })
-        return false;
-    });
-
-$('.slider1 .sl_item').click(function(event) {
- 
-   var c = $('<div class="box-modal" id="pop_sl_'+ $(this).data('sl') +'" />');
-                            // c.prepend('<div class="close_pop box-modal_close arcticmodal-close"><img src="img/close_zak.png" alt="close_zak"></div>');
-                            c.prepend('<div class="flex_slide"><h2>'+ $(this).find('p').text() + '</h2>'+
-                                '<div class="close_pop box-modal_close arcticmodal-close"><img src="img/close_zak.png" alt="close_zak"></div>'+
-                                    '<div class="dva_fl">'+
-   '<div class="left_img_sl"><img src="' + $(this).children('img').attr('src') +'" alt="bg"></div>'+
-   '<div class="right_text_sl">'+
-      '<p class="text_pop_sl">'+  $(this).data('info') + '</p>'+
-       '<a href="#" class="knopka test" >Получить каталог</a>'+
-   '</div>'+
-'</div>'+
-                                '</div>'
-                                    
-
-                                );
-                            $.arcticmodal({
-                                beforeOpen: function(a, b) {
-                                    $("body,header").css({
-                overflow: "hidden",
-                "padding-right": "16px"
-            }), $(b).closest(".arcticmodal-container_i").css("width", "100%")
-         $(".test").click(function(a) {
-        a.preventDefault(), $("#test").arcticmodal({
-            overlay: {
-                css: {
-                    backgroundColor: '#ecf0f5',
-                    opacity: 1
                 }
-            }
-        })
+            })
         return false;
     });
-    },
-        afterOpen: function(a, b) {},
-        beforeClose: function(a, b) {},
-        afterClose: function(a, b) {
-            $("body,header").css({
-                overflow: "visible",
-                "padding-right": "0px"
-            })
-        },
-                                content: c
+
+    $('.sl_item').click(function(event) {
+
+        var c = $('<div class="box-modal" id="pop_sl_' + $(this).data('sl') + '" />');
+        
+        c.prepend('<div class="flex_slide"><h2>' + $(this).find('p').text() + '</h2>' +
+            '<div class="close_pop box-modal_close arcticmodal-close"><img src="img/close_zak.png" alt="close_zak"></div>' +
+            '<div class="dva_fl">' +
+            '<div class="left_img_sl"><img src="' + $(this).children('img').attr('src') + '" alt="bg"></div>' +
+            '<div class="right_text_sl">' +
+            '<p class="text_pop_sl">' + $(this).data('info') + '</p>' +
+            '<a href="#" class="knopka zakaz_pop3" >Получить каталог</a>' +
+            '</div>' +
+            '</div>' +
+            '</div>'
+
+
+        );
+        $.arcticmodal({
+            beforeOpen: function(a, b) {
+                $("body,header").css({
+                    overflow: "hidden",
+                    "padding-right": "16px"
+                }), $(b).closest(".arcticmodal-container_i").css("width", "100%")
+                $(".zakaz_pop3").click(function(a) {
+                    a.preventDefault(), $("#zakaz_pop3").arcticmodal({
+                        overlay: {
+                            css: {
+                                backgroundColor: '#000',
+                                opacity: 0.6
+                            }
+                        }
+                    });
+                    yaCounter44576791.reachGoal('form-callback');
+        ga('send','event','form','form-callback');
+                    return false;
+                });
+            },
+            afterOpen: function(a, b) {},
+            beforeClose: function(a, b) {},
+            afterClose: function(a, b) {
+                $("body,header").css({
+                    overflow: "visible",
+                    "padding-right": "0px"
+                })
+            },
+            content: c
+        });
     });
-});
 
 
     var isMobile = false;
@@ -125,10 +127,10 @@ $('.slider1 .sl_item').click(function(event) {
         if (s > sec_s) {
 
             $('header').css({
-                'background':'#ecf0f5',
-                '-webkit-box-shadow':'0 5px 27px rgba(0, 0, 0, 0.1);',
-                'box-shadow':'0 5px 27px rgba(0, 0, 0, 0.1)'
-        });
+                'background': '#ecf0f5',
+                '-webkit-box-shadow': '0 5px 27px rgba(0, 0, 0, 0.1);',
+                'box-shadow': '0 5px 27px rgba(0, 0, 0, 0.1)'
+            });
 
             $('.text p').addClass('scrop');
             $('.phonekn').addClass('scr_p');
@@ -139,10 +141,10 @@ $('.slider1 .sl_item').click(function(event) {
 
         } else {
             $('header').css({
-                'background':'transparent',
-                '-webkit-box-shadow':'none',
-                'box-shadow':'none'
-        });
+                'background': 'transparent',
+                '-webkit-box-shadow': 'none',
+                'box-shadow': 'none'
+            });
             $('.text p').removeClass('scrop');
             $('.phonekn').removeClass('scr_p');
             $('.knopka_zakaz').removeClass('scr_k');
@@ -154,141 +156,157 @@ $('.slider1 .sl_item').click(function(event) {
     });
 
     $('.pager img').click(function(event) {
-        var now_img =  $(this).parent().parent().find('.glav')
+        var now_img = $(this).parent().parent().find('.glav')
         now_img = now_img.attr('src')
         var this_img = $(this).attr('src')
         $(this).parent().parent().find('.glav').attr('src', this_img)
-        $(this).attr('src',now_img)
-    });
-
-    $('.sl_bol').bxSlider({
-        minSlides: 1,
-        // slideWidth: 276,
-        maxSlides: 1,
-        slideMargin: 0,
-        pager: false,
-        speed: 500,
-        nextSelector: '#sld3r',
-        prevSelector: '#sld3l',
-        moveSlides: 1
-    });
-     // if (isMobile != true) {
-    $('.slider1').bxSlider({
-        minSlides: 1,
-        startSlide: 1,
-        slideWidth: 276,
-        maxSlides: 3,
-        slideMargin: 30,
-        pager: false,
-        speed: 500,
-        nextSelector: '#sld1r',
-        prevSelector: '#sld1l',
-        controls: true,
- 		auto: false,
-		moveSlides: 1
+        $(this).attr('src', now_img)
     });
 
 
-     // $('.bxslider').bxSlider();
-// var slideQty = slider.getSlideCount();
-// console.log(slideQty)
+    $('.ofissl1').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  nextArrow: '<span class="str_r_s4" id="sld4r">',
+  prevArrow: '<span class="str_l_s4" id="sld4l">'
+});
+    $('.ofissl2').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  nextArrow: '<span class="str_r_s5" id="sld5r">',
+  prevArrow: '<span class="str_l_s5" id="sld5l">'
+});
+    $('.ofissl3').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  nextArrow: '<span class="str_r_s6" id="sld6r">',
+  prevArrow: '<span class="str_l_s6" id="sld6l">'
+});
 
+   
 
-    $('.slider2').bxSlider({
-        minSlides: 1,
-        startSlide: 1,
-        slideWidth: 276,
-        maxSlides: 3,
-        slideMargin: 30,
-        pager: false,
-        speed: 500,
-        nextSelector: '#sld2r',
-        prevSelector: '#sld2l',
-        controls: true,
- 		auto: false,
-		moveSlides: 1
-    });
+$('.sl_bol').slick({
+    dots: false,
+  infinite: true,
+  draggable:false,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerPadding: 30,
+  prevArrow: '<span class="str_l_s3" id="sld3l">', 
+  nextArrow: '<span class="str_r_s3" id="sld3r">'
+})
+$('.slider1').slick({
+  dots: false,
+  infinite: true,
+  draggable:false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  centerPadding: 30,
+  prevArrow: '<span class="str_l_s2 slick-prev" id="sld1l"></span>',
+  nextArrow: '<span class="str_r_s2 slick-next" id="sld1r"></span>',
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '10px'
+      }
+    }]
+});
 
+$('.slider2').slick({
+    draggable:false,
+  dots: false,
+  infinite: true,
+  arrows:true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  prevArrow: '<span class="str_l_s2 slick-prev" id="sld2l"></span>',
+  nextArrow: '<span class="str_r_s2 slick-next" id="sld2r"></span>',
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '10px'
+      }
+    }]
+});
 
-
-    $('.ofissl1').bxSlider({
-    	nextSelector: '#sld4r',
-        prevSelector: '#sld4l',
-        slideWidth: 450,
-        // startSlide: 1,
-        slideMargin: 5,
-        adaptiveHeight: true,
-        captions: true,
-        pager: true
-    });
-    $('.ofissl2').bxSlider({
-    	nextSelector: '#sld5r',
-        prevSelector: '#sld5l',
-        slideWidth: 450,
-        // startSlide: 1,
-        slideMargin: 5,
-        adaptiveHeight: true,
-        captions: true,
-        pager: true
-    });
-    $('.ofissl3').bxSlider({
-    	nextSelector: '#sld6r',
-        prevSelector: '#sld6l',
-        slideWidth: 450,
-        // startSlide: 1,
-        slideMargin: 5,
-        adaptiveHeight: true,
-        captions: true,
-        pager: true
-    });
     if (isMobile != true) {
-    $("body").addClass("loaded"), 
+        $("body").addClass("loaded"),
 
-    $.arcticmodal("setDefault", {
-        beforeOpen: function(a, b) {
-            $("body,header").css({
-                overflow: "hidden",
-                "padding-right": "16px"
-            }), $(b).closest(".arcticmodal-container_i").css("width", "100%")
-        },
-        afterOpen: function(a, b) {},
-        beforeClose: function(a, b) {},
-        afterClose: function(a, b) {
-            $("body,header").css({
-                overflow: "visible",
-                "padding-right": "0px"
-            })
-        }
-    })} 
-
-    $(".zakaz_pop_k").click(function(a) {
-        a.preventDefault(), 
-       
-        $("#zakaz_pop").arcticmodal({
-            overlay: {
-                css: {
-                    backgroundColor: '#111',
-                    opacity: 0.5
+            $.arcticmodal("setDefault", {
+                beforeOpen: function(a, b) {
+                    $("body,header").css({
+                        overflow: "hidden",
+                        "padding-right": "16px"
+                    }), $(b).closest(".arcticmodal-container_i").css("width", "100%")
+                },
+                afterOpen: function(a, b) {},
+                beforeClose: function(a, b) {},
+                afterClose: function(a, b) {
+                    $("body,header").css({
+                        overflow: "visible",
+                        "padding-right": "0px"
+                    })
                 }
-            }
-        })
+            })
+    }
+$('.cssload-container').fadeOut(250);
+    $(".zakaz_pop_k").click(function(a) {
+        a.preventDefault(),
+
+            $("#zakaz_pop").arcticmodal({
+                overlay: {
+                    css: {
+                        backgroundColor: '#111',
+                        opacity: 0.5
+                    }
+                }
+            });
+            yaCounter44576791.reachGoal('form-callback');
+        ga('send','event','form','form-callback');
         return false;
     });
-$('.zakaz_pop_k_n').click(function(a) {
-    a.preventDefault(), 
-    $('#zakaz_pop' + $(this).data('body')).arcticmodal({
-            overlay: {
-                css: {
-                   backgroundColor: '#c5a47e',
+    $('.zakaz_pop_k_n').click(function(a) {
+        a.preventDefault(),
+            $('#zakaz_pop' + $(this).data('body')).arcticmodal({
+                overlay: {
+                    css: {
+                        backgroundColor: '#c5a47e',
                         opacity: 1
+                    }
                 }
-            }
-        })
-});
+            });
+            yaCounter44576791.reachGoal('form-callback');
+        ga('send','event','form','form-callback');
+    });
 
 
 
     $(".test").click(function(a) {
+        $('.smena').val('form-test-out')
         a.preventDefault(), $("#test").arcticmodal({
             overlay: {
                 css: {
@@ -296,7 +314,26 @@ $('.zakaz_pop_k_n').click(function(a) {
                     opacity: 1
                 }
             }
-        })
+        });
+        yaCounter44576791.reachGoal('form-test-in');
+        ga('send','event','form','form-test-in');
+        return false;
+    });
+
+    $(".test_vtoroi").click(function(a) {
+
+        $('.smena').val('form-test-out2')
+
+        a.preventDefault(), $("#test").arcticmodal({
+            overlay: {
+                css: {
+                    backgroundColor: '#ecf0f5',
+                    opacity: 1
+                }
+            }
+        });
+        yaCounter44576791.reachGoal('form-test-in2');
+        ga('send','event','form','form-test-in2');
         return false;
     });
 
@@ -353,7 +390,7 @@ $('.zakaz_pop_k_n').click(function(a) {
         return false;
     });
 
-var $text4 = $('.step2'),
+    var $text4 = $('.step2'),
         $box4 = $('input:checkbox[name="step2[]"]');
 
     $box4.on('click change', function() {
@@ -408,7 +445,7 @@ var $text4 = $('.step2'),
     }
 
     //Кнопка назад
-    $(".back").click(function(){
+    $(".back").click(function() {
         if (current_step == 1) {
             $(this).hide();
             $('.nom span').text(current_step - 0);
@@ -417,156 +454,56 @@ var $text4 = $('.step2'),
         }
 
         var now = $('.skidka span').text();
-            $('.skidka span').text(parseInt(now) - 625);
-            
-
-        // $("form input[type=submit]").hide();
-        // $("a.next").show();
+        $('.skidka span').text(parseInt(now) - 625);
         current_step--;
         changeStep(current_step);
     });
 
 
 
-    google.maps.event.addDomListener(window, 'load', init);
 
-    function init() {
-        var mapOptions = {
-            zoom: 17,
-            scrollwheel: false,
-            center: new google.maps.LatLng(55.770884, 37.633209),
-            styles: [{
-                "featureType": "all",
-                "elementType": "labels.text.fill",
-                "stylers": [{
-                    "saturation": 36
-                }, {
-                    "color": "#000000"
-                }, {
-                    "lightness": 40
-                }]
-            }, {
-                "featureType": "all",
-                "elementType": "labels.text.stroke",
-                "stylers": [{
-                    "visibility": "on"
-                }, {
-                    "color": "#000000"
-                }, {
-                    "lightness": 16
-                }]
-            }, {
-                "featureType": "all",
-                "elementType": "labels.icon",
-                "stylers": [{
-                    "visibility": "off"
-                }]
-            }, {
-                "featureType": "administrative",
-                "elementType": "geometry.fill",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 20
-                }]
-            }, {
-                "featureType": "administrative",
-                "elementType": "geometry.stroke",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 17
-                }, {
-                    "weight": 1.2
-                }]
-            }, {
-                "featureType": "landscape",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 20
-                }]
-            }, {
-                "featureType": "poi",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 21
-                }]
-            }, {
-                "featureType": "road.highway",
-                "elementType": "geometry.fill",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 17
-                }]
-            }, {
-                "featureType": "road.highway",
-                "elementType": "geometry.stroke",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 29
-                }, {
-                    "weight": 0.2
-                }]
-            }, {
-                "featureType": "road.arterial",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 18
-                }]
-            }, {
-                "featureType": "road.local",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 16
-                }]
-            }, {
-                "featureType": "transit",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 19
-                }]
-            }, {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 17
-                }]
-            }]
-        };
+    $("form").submit(function() {
+        var th = $(this);
+        var track_event=$(this).find('input[name="event"]').val();
+        $.ajax({
+            type: "POST",
+            url: "mail.php", 
+            data: th.serialize()
+        }).done(function() {
 
-        var mapElement = document.getElementById('map');
-        var map = new google.maps.Map(mapElement, mapOptions);
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(55.770884, 37.633209),
-            map: map,
-            icon: {
-                url: 'img/Point map.svg',
-                origin: new google.maps.Point(-151, 0),
-                origin: new google.maps.Point(0, 0),
-                size: new google.maps.Size(60, 80),
-            },
-            title: 'Россия, г. Москва, ул.Сретенка 28'
+            yaCounter44576791.reachGoal(track_event);
+            ga('send','event','form',track_event);
+            $.arcticmodal('close');
+            $('#thank').arcticmodal({
+                beforeOpen: function(a, b) {
+                    $("body,header").css({
+                        overflow: "hidden",
+                        "padding-right": "16px"
+                    }), $(b).closest(".arcticmodal-container_i").css("width", "100%")
+                },
+                afterOpen: function(a, b) {},
+                beforeClose: function(a, b) {},
+                afterClose: function(a, b) {
+                    $("body,header").css({
+                        overflow: "visible",
+                        "padding-right": "0px"
+                    })
+                },
+                overlay: {
+                            css: {
+                                backgroundColor: '#000',
+                                opacity: 0.6
+                            }
+                        }
+            });
+            // alert("Thank you!");
+            setTimeout(function() {
+              
+                th.trigger("reset");
+            }, 1000);
         });
-    }
+        return false;
+    });
 
-
-
-
+   
 });
-
-
-
