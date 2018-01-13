@@ -1,7 +1,7 @@
 $(document).ready(function($) {
     
     step = $(".form-wrap").children(".form-wrap__step");
-    $(step[0]).show();
+    // $(step[0]).show();
     now_step = 0;
 
     $(".next").click(function(){

@@ -90,6 +90,8 @@ section, footer, header { width: 100%; position: relative; }
 
 .form-wrap__step { display: none; }
 
+.form-wrap__step:nth-child(1) { display: block; }
+
 .column { max-width: 45.5rem; width: 100%; }
 
 .row { margin-bottom: 1.5rem; }
